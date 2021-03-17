@@ -1,0 +1,230 @@
+{
+    "type": "FeatureCollection",
+    "query": [
+        70.7863634,
+        22.2782369
+    ],
+    "features": [{
+            "id": "poi.103079223486",
+            "type": "Feature",
+            "place_type": [
+                "poi"
+            ],
+            "relevance": 1,
+            "properties": {
+                "foursquare": "4bc748698b7c9c74252136cf",
+                "landmark": true,
+                "address": "Nehru Nagar Co. Operative Society",
+                "category": "mall, shop"
+            },
+            "text": "Grand Central Mall",
+            "place_name": "Grand Central Mall, Nehru Nagar Co. Operative Society, Rajkot, Gujarat, India",
+            "center": [
+                70.780669,
+                22.278225
+            ],
+            "geometry": {
+                "coordinates": [
+                    70.780669,
+                    22.278225
+                ],
+                "type": "Point"
+            },
+            "context": [{
+                    "id": "locality.17217032598913490",
+                    "text": "Raj Nagar"
+                },
+                {
+                    "id": "place.10757280746563030",
+                    "wikidata": "Q11854",
+                    "text": "Rajkot"
+                },
+                {
+                    "id": "district.4665643136563030",
+                    "wikidata": "Q1815245",
+                    "text": "Rajkot"
+                },
+                {
+                    "id": "region.11420597151576720",
+                    "wikidata": "Q1061",
+                    "short_code": "IN-GJ",
+                    "text": "Gujarat"
+                },
+                {
+                    "id": "country.2782945337",
+                    "wikidata": "Q668",
+                    "short_code": "in",
+                    "text": "India"
+                }
+            ]
+        },
+        {
+            "id": "locality.17217032598913490",
+            "type": "Feature",
+            "place_type": [
+                "locality"
+            ],
+            "relevance": 1,
+            "properties": {},
+            "text": "Raj Nagar",
+            "place_name": "Raj Nagar, Rajkot, Rajkot, Gujarat, India",
+            "bbox": [
+                70.784334,
+                22.27751397,
+                70.787835,
+                22.281201
+            ],
+            "center": [
+                70.786285,
+                22.279052
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    70.786285,
+                    22.279052
+                ]
+            },
+            "context": [{
+                    "id": "place.10757280746563030",
+                    "wikidata": "Q11854",
+                    "text": "Rajkot"
+                },
+                {
+                    "id": "district.4665643136563030",
+                    "wikidata": "Q1815245",
+                    "text": "Rajkot"
+                },
+                {
+                    "id": "region.11420597151576720",
+                    "wikidata": "Q1061",
+                    "short_code": "IN-GJ",
+                    "text": "Gujarat"
+                },
+                {
+                    "id": "country.2782945337",
+                    "wikidata": "Q668",
+                    "short_code": "in",
+                    "text": "India"
+                }
+            ]
+        },
+        {
+            "id": "place.10757280746563030",
+            "type": "Feature",
+            "place_type": [
+                "place"
+            ],
+            "relevance": 1,
+            "properties": {
+                "wikidata": "Q11854"
+            },
+            "text": "Rajkot",
+            "place_name": "Rajkot, Gujarat, India",
+            "bbox": [
+                70.697507,
+                22.057136,
+                71.10065,
+                22.523611
+            ],
+            "center": [
+                70.79836,
+                22.29691
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    70.79836,
+                    22.29691
+                ]
+            },
+            "context": [{
+                    "id": "district.4665643136563030",
+                    "wikidata": "Q1815245",
+                    "text": "Rajkot"
+                },
+                {
+                    "id": "region.11420597151576720",
+                    "wikidata": "Q1061",
+                    "short_code": "IN-GJ",
+                    "text": "Gujarat"
+                },
+                {
+                    "id": "country.2782945337",
+                    "wikidata": "Q668",
+                    "short_code": "in",
+                    "text": "India"
+                }
+            ]
+        },
+        {
+            "id": "region.11420597151576720",
+            "type": "Feature",
+            "place_type": [
+                "region"
+            ],
+            "relevance": 1,
+            "properties": {
+                "wikidata": "Q1061",
+                "short_code": "IN-GJ"
+            },
+            "text": "Gujarat",
+            "place_name": "Gujarat, India",
+            "bbox": [
+                68.075394446641,
+                20.0972018158416,
+                74.4765879081601,
+                24.7121739731198
+            ],
+            "center": [
+                71.3624549010153,
+                23.58157241658
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    71.3624549010153,
+                    23.58157241658
+                ]
+            },
+            "context": [{
+                "id": "country.2782945337",
+                "wikidata": "Q668",
+                "short_code": "in",
+                "text": "India"
+            }]
+        },
+        {
+            "id": "country.2782945337",
+            "type": "Feature",
+            "place_type": [
+                "country"
+            ],
+            "relevance": 1,
+            "properties": {
+                "wikidata": "Q668",
+                "short_code": "in"
+            },
+            "text": "India",
+            "place_name": "India",
+            "bbox": [
+                68.0753944015233,
+                6.65718310150864,
+                97.3950629309158,
+                35.6732489160381
+            ],
+            "center": [
+                78.476681027237,
+                22.1991660760527
+            ],
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    78.476681027237,
+                    22.1991660760527
+                ]
+            }
+        }
+    ],
+    "attribution": "NOTICE: © 2021 Mapbox and its suppliers. All rights reserved. Use of this data is subject to the Mapbox Terms of Service (https://www.mapbox.com/about/maps/). This response and the information it contains may not be retained. POI(s) provided by Foursquare."
+}

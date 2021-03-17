@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation | Basics</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./css/basics.css">
+    <link rel="stylesheet" href="./css/arrow.css">
+    <link rel="stylesheet" href="./css/form.css">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container center">
+
+        <h1 class="title underline">Basics</h1>
+        <button class="clickmeButton" onclick="getLocation()">Click Me!</button>
+
+        <div class="content">
+            <p class="basics" id="basics1"></p>
+        </div>
+
+        <div class="arrow bounce btn">
+            <div class="fa fa-arrow-down fa-4x"></div>
+        </div>
+    </div>
+
+    <div class="container center">
+
+        <div class="arrow bounce btn scroll-up">
+            <div class="fa fa-arrow-up fa-4x"></div>
+        </div>
+
+        <h1 class="title">Applications</h1>
+
+        <div class="arrow bounce btn">
+            <div class="fa fa-arrow-down fa-4x"></div>
+        </div>
+    </div>
+
+    <div class="container center">
+        <div class="arrow bounce btn scroll-up">
+            <div class="fa fa-arrow-up fa-4x"></div>
+        </div>
+        <h1 class="title">Filling Forms</h1>
+
+        <button class="clickmeButton" onclick="fillForm()">Get My Location!</button>
+
+        <div class="content">
+            <div class="form-style-6">
+                <h1>Contact Us</h1>
+                <form>
+                    <input id="street" type="text" name="field0" placeholder="Street" />
+                    <input id="city" type="text" name="field1" placeholder="District" />
+                    <input id="state" type="text" name="field2" placeholder="Region" />
+                    <input id="country" type="text" name="field3" placeholder="Country" />
+                    <textarea id="addr" type="text" name="field4" placeholder="Full Address"></textarea>
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+        </div>
+
+        <div class="arrow bounce btn">
+            <div class="fa fa-arrow-down fa-4x"></div>
+        </div>
+    </div>
+
+    <div class="container center">
+        <div class="arrow bounce btn scroll-up">
+            <div class="fa fa-arrow-up fa-4x"></div>
+        </div>
+        <h1 class="title">Browser Context</h1>
+
+        <button class="clickmeButton" onclick="getCovidData()">Covid Cases in my Country!</button>
+
+        <div class="content">
+            <p class="basics" id="basics2"></p>
+        </div>
+
+        <div class="arrow bounce btn">
+            <div class="fa fa-arrow-down fa-4x"></div>
+        </div>
+    </div>
+
+    <div class="container center">
+        <div class="arrow bounce btn scroll-up">
+            <div class="fa fa-arrow-up fa-4x"></div>
+        </div>
+        <h1 class="title">Weather Updates, Of Course!</h1>
+
+        <button class="clickmeButton" onclick="getWeatherUpdates()">Will it Rain today!?</button>
+
+        <div class="content">
+            <p class="basics" id="basics3"></p>
+        </div>
+
+        <div class="arrow bounce btn">
+            <div class="fa fa-arrow-down fa-4x"></div>
+        </div>
+    </div>
+
+    <div class="container center">
+        <div class="arrow bounce btn scroll-up">
+            <div class="fa fa-arrow-up fa-4x"></div>
+        </div>
+        <h1 class="title">Maps!</h1>
+
+        <button class="clickmeButton" onclick="updateMap()">Pin Point me!</button>
+
+        <div class="content">
+            <div id="map-1"></div>
+        </div>
+
+        <div class="arrow bounce btn">
+            <div class="fa fa-arrow-down fa-4x"></div>
+        </div>
+    </div>
+
+
+
+    <div class="container center">
+        <div class="arrow bounce btn scroll-up">
+            <div class="fa fa-arrow-up fa-4x"></div>
+        </div>
+        <h1 class="title">Navigation</h1>
+
+        <button class="clickmeButton" onclick="navigate()">Send me to Campus, Please! :( </button>
+
+        <div class="content">
+            <div id="map-2"></div>
+            <div id="instructions"></div>
+        </div>
+
+        <div class="arrow bounce btn">
+            <div class="fa fa-arrow-down fa-4x"></div>
+        </div>
+    </div>
+
+    <div class="container center ">
+        <div class="arrow bounce btn scroll-up">
+            <div class="fa fa-arrow-up fa-4x"></div>
+        </div>
+        <h1 class="heading">Third Party API References</h1>
+
+        <div class="content last">
+            <ul>
+                <li><i class="fa fa-angle-right fa-2x"></i>
+                    <a href="https://docs.mapbox.com/api/search/geocoding/" target="_blank">Mapbox Geocoding API</a>
+                </li>
+                <li><i class="fa fa-angle-right fa-2x"></i>
+                    <a href="https://rapidapi.com/Gramzivi/api/covid-19-data" target="_blank">COVID-19 data API</a>
+                </li>
+                <li><i class="fa fa-angle-right fa-2x"></i>
+                    <a href="https://openweathermap.org/api" target="_blank">OpenWeather Weather API</a>
+                </li>
+            </ul>
+
+            <a href="https://github.com/mdo/github-buttons" class="git_btn">View on GitHub</a>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+<script src="./js/basics.js"></script>
+
+<script>
+    da = [72.628855, 23.188797];
+
+    mapboxgl.accessToken = '<< Add Your API Key >>';
+    var map2 = new mapboxgl.Map({
+        container: 'map-1',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [72.628855, 23.188797],
+        zoom: 15,
+        minZoom: 12,
+        maxZoom: 18
+    });
+
+    var map = new mapboxgl.Map({
+        container: 'map-2',
+        style: 'mapbox://styles/mapbox/streets-v10',
+        center: [72.628855, 23.188797],
+        zoom: 15
+    });
+
+    var canvas = map.getCanvasContainer();
+
+    // create a function to make a directions request
+    function getRoute(start) {
+        // make a directions request using cycling profile
+        // an arbitrary start will always be the same
+        // only the end or destination will change
+        var end = da;
+        var url = 'https://api.mapbox.com/directions/v5/mapbox/cycling/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
+
+        console.log(url);
+
+        // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+        var req = new XMLHttpRequest();
+        req.open('GET', url, true);
+        req.onload = function() {
+            var json = JSON.parse(req.response);
+            console.log(json);
+            var data = json.routes[0];
+            var route = data.geometry.coordinates;
+            var geojson = {
+                type: 'Feature',
+                properties: {},
+                geometry: {
+                    type: 'LineString',
+                    coordinates: route
+                }
+            };
+            // if the route already exists on the map, reset it using setData
+            if (map.getSource('route')) {
+                map.getSource('route').setData(geojson);
+            } else { // otherwise, make a new request
+                map.addLayer({
+                    id: 'route',
+                    type: 'line',
+                    source: {
+                        type: 'geojson',
+                        data: {
+                            type: 'Feature',
+                            properties: {},
+                            geometry: {
+                                type: 'LineString',
+                                coordinates: geojson
+                            }
+                        }
+                    },
+                    layout: {
+                        'line-join': 'round',
+                        'line-cap': 'round'
+                    },
+                    paint: {
+                        'line-color': '#3887be',
+                        'line-width': 5,
+                        'line-opacity': 0.75
+                    }
+                });
+            }
+            // add turn instructions here at the end
+
+        };
+        req.send();
+    }
+
+    function updateMap() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(async function(position) {
+                lat = await position.coords.latitude
+                long = await position.coords.longitude
+
+                map2.jumpTo({
+                    'center': [long, lat],
+                    'zoom': 15
+                });
+
+                var marker = new mapboxgl.Marker({
+                    color: "#000",
+                }).setLngLat([long, lat])
+
+                marker.addTo(map2);
+
+
+            })
+        }
+    }
+
+    function navigate() {
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(async function(position) {
+                console.log(position.coords.latitude, position.coords.longitude)
+                lat2 = await position.coords.latitude
+                long2 = await position.coords.longitude
+
+                start = [long2, lat2];
+                // make an initial directions request that
+                // starts and ends at the same location
+                getRoute(start);
+
+                map.on('load', function() {
+                    // make an initial directions request that
+                    // starts and ends at the same location
+                    getRoute(start);
+
+                    // Add starting point to the map
+                    map.addLayer({
+                        id: 'point',
+                        type: 'circle',
+                        source: {
+                            type: 'geojson',
+                            data: {
+                                type: 'FeatureCollection',
+                                features: [{
+                                    type: 'Feature',
+                                    properties: {},
+                                    geometry: {
+                                        type: 'Point',
+                                        coordinates: start
+                                    }
+                                }]
+                            }
+                        },
+                        paint: {
+                            'circle-radius': 10,
+                            'circle-color': '#3887be'
+                        }
+                    });
+                    // this is where the code from the next step will go
+
+                    var end = {
+                        type: 'FeatureCollection',
+                        features: [{
+                            type: 'Feature',
+                            properties: {},
+                            geometry: {
+                                type: 'Point',
+                                coordinates: da
+                            }
+                        }]
+                    };
+                    if (map.getLayer('end')) {
+                        map.getSource('end').setData(end);
+                    } else {
+                        map.addLayer({
+                            id: 'end',
+                            type: 'circle',
+                            source: {
+                                type: 'geojson',
+                                data: {
+                                    type: 'FeatureCollection',
+                                    features: [{
+                                        type: 'Feature',
+                                        properties: {},
+                                        geometry: {
+                                            type: 'Point',
+                                            coordinates: da
+                                        }
+                                    }]
+                                }
+                            },
+                            paint: {
+                                'circle-radius': 10,
+                                'circle-color': '#f30'
+                            }
+                        });
+                    }
+
+
+                });
+                getRoute(da);
+
+            })
+
+
+        }
+    }
+</script>
+
+</html>
